@@ -13,7 +13,6 @@ RUN mkdir -p $PROJECT_PATH
 COPY . $PROJECT_PATH
 WORKDIR $PROJECT_PATH
 
-RUN make dev-requirements
 RUN make
 
 FROM alpine:3.13.2 AS production
