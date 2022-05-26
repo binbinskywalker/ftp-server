@@ -1,0 +1,8 @@
+[ftp]
+	user="ds"
+	password="testwalk.123"
+	port=2222
+	host="192.168.81.129"
+  group="nogroup"
+  owner="nobody"
+  passive-port="2223-2225"

@@ -1,0 +1,452 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+fatal: not a git repository (or any of the parent directories): .git
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu May 26 14:46:18 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+PAPERSIZE = letter
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+UPSTART_INSTANCE = 
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+BUILDPATH = /home/imx6/project/gateway/build
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /home/imx6/.Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=fcitx
+# makefile
+CURDIR := /home/imx6/tools/gopath/src/ftp-server
+# makefile
+SHELL = /bin/sh
+# environment
+UPSTART_JOB = unity7
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"42e84e0914b17800d483f69e299e1b00.zh-cn","_translationsConfigFile":"/home/imx6/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/tcf.json","_cacheRoot":"/home/imx6/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn","_resolvedLanguagePackCoreLocation":"/home/imx6/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5","_corruptedFile":"/home/imx6/.config/Code/clp/42e84e0914b17800d483f69e299e1b00.zh-cn/corrupted.info","_languagePackSupport":true}
+# environment
+_ = /usr/share/code/code
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+# environment
+OUTPATH = /home/imx6/project/gateway/build/ubuntu
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
+# environment
+MVN_PATH = /home/imx6/tools/apache-maven-3.8.4
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+SESSIONTYPE = gnome-session
+# environment
+MAKELEVEL := 0
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-SgoH7yyQPG
+# makefile (from 'Makefile', line 2)
+VERSION := 
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+UNITY_DEFAULT_PROFILE = unity
+# environment
+CLUTTER_IM_MODULE = xim
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = en_US.UTF-8
+# environment
+VSCODE_CWD = /home/imx6
+# environment
+GOPROXY = https://goproxy.cn
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/imx6/tools/go/bin:/home/imx6/project/gateway/build/ubuntu/bin:/home/imx6/toolchain/bin:/usr/local/nsq-1.2.0/bin:/home/imx6/tools/apache-maven-3.8.4/bin:/usr/local/node-v16.13.2-linux-x64/bin:/usr/local/python37/bin:/usr/local/git/bin:/opt/clion-2021.1.2/bin:/home/imx6/toolchain/bin:/home/imx6/bin:/home/imx6/.local/bin:/usr/local/nsq-1.2.0/bin:/home/imx6/tools/apache-maven-3.8.4/bin:/usr/local/node-v16.13.2-linux-x64/bin:/usr/local/python37/bin:/usr/local/git/bin:/opt/clion-2021.1.2/bin:/home/imx6/toolchain/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/imx6/tools/gopath/bin:/home/imx6/tools/gopath/bin
+# environment
+PLAT = ubuntu
+# environment
+UNITY_HAS_3D_SUPPORT = true
+# environment
+GPG_AGENT_INFO = /home/imx6/.gnupg/S.gpg-agent:0:1
+# environment
+SRCPATH = /home/imx6/project/gateway/source
+# environment
+SESSION_MANAGER = local/ubuntu:@/tmp/.ICE-unix/3975,unix/ubuntu:/tmp/.ICE-unix/3975
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GOPATH = /home/imx6/tools/gopath
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+SESSION = ubuntu
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/imx6
+# environment
+LS_COLORS = 
+# environment
+JOB = unity-settings-daemon
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4541
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+GTK_IM_MODULE = fcitx
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /home/imx6/tools/gopath/src/ftp-server
+# environment
+QT_QPA_PLATFORMTHEME = appmenu-qt5
+# environment
+XDG_SEAT = seat0
+# environment
+GDM_LANG = en_US
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = Unity
+# environment
+GTK_MODULES = gail:atk-bridge:unity-gtk-module
+# environment
+GOMODCACHE = /home/imx6/tools/gopath/pkg/mod
+# environment
+HOME = /home/imx6
+# environment
+LD_LIBRARY_PATH = /usr/local/postgresql/lib:/home/imx6/project/gateway/build/ubuntu/lib:/usr/arm-linux-gnueabihf/lib/:
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CODE_CACHE_PATH = /home/imx6/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# environment
+LOGNAME = imx6
+# environment
+QT_LINUX_ACCESSIBILITY_ALWAYS_ON = 1
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+MAKE_VERSION := 4.1
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 7
+# environment
+LC_TIME = en_US.UTF-8
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = fcitx
+# environment
+SHLVL = 1
+# environment
+IM_CONFIG_PHASE = 1
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e3fd758b-7e15-4262-95a3-b154915adbae.sock
+# environment
+COMPIZ_CONFIG_PROFILE = ubuntu
+# environment
+XDG_SESSION_ID = c2
+# environment
+USER = imx6
+# environment
+LC_MONETARY = en_US.UTF-8
+# makefile
+.DEFAULT_GOAL := build
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+GOROOT = /home/imx6/tools/go
+# environment
+UPSTART_EVENTS = xsession started
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+GNOME_KEYRING_PID = 
+# environment
+LC_TELEPHONE = en_US.UTF-8
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+LANGUAGE = en_US:en
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-77a803e1-1.67.2-main.sock
+# environment
+GNOME_KEYRING_CONTROL = 
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = en_US.UTF-8
+# environment
+GTK2_MODULES = overlay-scrollbar
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+COMPIZ_BIN_PATH = /usr/bin/
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# default
+MAKEFILES := 
+# environment
+UPSTART_SESSION = unix:abstract=/com/ubuntu/upstart-session/1000/3760
+# environment
+LC_NUMERIC = en_US.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+LC_MEASUREMENT = en_US.UTF-8
+# environment
+INSTANCE = 
+# environment
+LC_ALL = C
+# environment
+QT4_IM_MODULE = fcitx
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+GOTOOLS = /home/imx6/tools/go/pkg/tool
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+LC_IDENTIFICATION = en_US.UTF-8
+# environment
+PROROOT = /home/imx6/project/gateway
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = en_US.UTF-8
+# environment
+LANG = C
+# environment
+VSCODE_PID = 4541
+# variable set hash-table stats:
+# Load=139/1024=14%, Rehash=0, Collisions=15/167=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2049, inode 7345041): 19 files, no impossibilities.
+
+# 19 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+ 
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+.PHONY: build clean test package serve update-vendor api
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+api:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-26 14:45:55.526976637
+#  File has been updated.
+#  Successfully updated.
+
+test:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 16):
+	@echo "Running tests"
+	@rm -f coverage.out
+	@golint ./...
+	@go vet ./...
+	@go test -p 1 -v -cover ./... -coverprofile coverage.out
+
+build:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 6):
+	@echo "Compiling source"
+	@mkdir -p build
+	go build $(GO_EXTRA_BUILD_ARGS) -ldflags "-s -w -X main.version=$(VERSION)" -o build/ftpserver cmd/ftpserver/main.go
+
+run-compose-test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 58):
+	docker-compose run --rm networkserver make test
+
+dev-requirements:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 45):
+	go install golang.org/x/lint/golint
+	go install golang.org/x/tools/cmd/stringer
+	go install github.com/golang/protobuf/protoc-gen-go
+	go install github.com/goreleaser/goreleaser
+	go install github.com/goreleaser/nfpm
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+package:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 11):
+	@echo "Cleaning up workspace"
+	@rm -rf build
+	@rm -rf dist
+
+dist:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 23):
+	goreleaser
+	mkdir -p dist/upload/tar
+	mkdir -p dist/upload/deb
+	mkdir -p dist/upload/rpm
+	mv dist/*.tar.gz dist/upload/tar
+	mv dist/*.deb dist/upload/deb
+	mv dist/*.rpm dist/upload/rpm
+
+snapshot:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 32):
+	@goreleaser --snapshot
+
+serve: build
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 54):
+	@echo "Starting ChirpStack Network Server"
+	./build/ftpserver
+
+update-vendor:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=16/1024=2%, Rehash=0, Collisions=0/38=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 35 / storage = 315 B / avg = 9 B
+# current buf: size = 8162 B / used = 315 B / count = 35 / avg = 9 B
+
+# strcache performance: lookups = 54 / hit rate = 35%
+# hash-table stats:
+# Load=35/8192=0%, Rehash=0, Collisions=1/54=2%
+# Finished Make data base on Thu May 26 14:46:18 2022
+
+ 

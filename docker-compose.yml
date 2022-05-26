@@ -1,0 +1,18 @@
+version: "2"
+services:
+  ftp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile-devel
+    command: make serve
+    volumes:
+      - ./:/ftp-server
+    ports:
+      - 2222:2222
+      - 2223-2225:2223-2225
+    environment:
+      - DB_AUTOMIGRATE=true
+networks:
+  default:
+    external:
+      name: chirpstackdocker_default

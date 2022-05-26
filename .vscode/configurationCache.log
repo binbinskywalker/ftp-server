@@ -1,0 +1,1 @@
+{"buildTargets":["api","build","clean","dev-requirements","dist","package","run-compose-test","serve","snapshot","test","update-vendor"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
