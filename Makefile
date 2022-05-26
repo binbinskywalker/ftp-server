@@ -30,13 +30,6 @@ dist:
 snapshot:
 	@goreleaser --snapshot
 
-dev-requirements:
-	go install golang.org/x/lint/golint
-	go install golang.org/x/tools/cmd/stringer
-	go install github.com/golang/protobuf/protoc-gen-go
-	go install github.com/goreleaser/goreleaser
-	go install github.com/goreleaser/nfpm
-
 # shortcuts for development
 
 serve: build

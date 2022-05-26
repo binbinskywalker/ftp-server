@@ -1,9 +1,12 @@
 package cmd
 
 import (
+	"encoding/json"
+	"os"
 	"reflect"
 	"strings"
 
+	"github.com/mitchellh/mapstructure"
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -56,7 +59,46 @@ func initConfig() {
 			log.WithError(err).Fatal("read configuration file error")
 		}
 	}
+	for _, pair := range os.Environ() {
+		d := strings.SplitN(pair, "=", 2)
+		if strings.Contains(d[0], ".") {
+			log.Warning("Using dots in env variable is illegal and deprecated. Please use double underscore `__` for: ", d[0])
+			underscoreName := strings.ReplaceAll(d[0], ".", "__")
+			// Set only when the underscore version doesn't already exist.
+			if _, exists := os.LookupEnv(underscoreName); !exists {
+				os.Setenv(underscoreName, d[1])
+			}
+		}
+	}
 	viperBindEnvs(config.C)
+	viperHooks := mapstructure.ComposeDecodeHookFunc(
+		viperDecodeJSONSlice,
+		mapstructure.StringToTimeDurationHookFunc(),
+		mapstructure.StringToSliceHookFunc(","),
+	)
+	if err := viper.Unmarshal(&config.C, viper.DecodeHook(viperHooks)); err != nil {
+		log.WithError(err).Fatal("unmarshal config error")
+	}
+
+}
+
+func viperDecodeJSONSlice(rf reflect.Kind, rt reflect.Kind, data interface{}) (interface{}, error) {
+	// input must be a string and destination must be a slice
+	if rf != reflect.String || rt != reflect.Slice {
+		return data, nil
+	}
+
+	raw := data.(string)
+
+	// this decoder expects a JSON list
+	if !strings.HasPrefix(raw, "[") || !strings.HasSuffix(raw, "]") {
+		return data, nil
+	}
+
+	var out []map[string]interface{}
+	err := json.Unmarshal([]byte(raw), &out)
+
+	return out, err
 }
 
 func viperBindEnvs(iface interface{}, parts ...string) {

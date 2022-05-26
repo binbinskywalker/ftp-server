@@ -9,10 +9,6 @@ import (
 	"ftp-server/cmd/ftp-server/cmd"
 )
 
-// grpcLogger implements a wrapper around the logrus Logger to make it
-// compatible with the grpc LoggerV2. It seems that V is not (always)
-// called, therefore the Info* methods are overridden as we want to
-// log these as debug info.
 type grpcLogger struct {
 	*log.Logger
 }
