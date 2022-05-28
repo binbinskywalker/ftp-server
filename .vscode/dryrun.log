@@ -1,9 +1,8 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/imx6/tools/gopath/src/ftp-server'
+ 
 echo "Compiling source"
 mkdir -p build
-go build  -ldflags "-s -w -X main.version=" -o build/ftpserver cmd/ftpserver/main.go
+go build  -ldflags "-s -w -X main.version=6dfc758" -o build/ftp-server cmd/ftp-server/main.go
 make: Leaving directory '/home/imx6/tools/gopath/src/ftp-server'
  
-fatal: not a git repository (or any of the parent directories): .git
-

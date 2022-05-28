@@ -1,5 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-fatal: not a git repository (or any of the parent directories): .git
 make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.1
@@ -9,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 26 14:46:18 2022
+# Make data base, printed on Fri May 27 14:08:21 2022
 
 # Variables
 
@@ -77,8 +76,9 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-SgoH7yyQPG
+ 
 # makefile (from 'Makefile', line 2)
-VERSION := 
+VERSION := 6dfc758
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
@@ -134,13 +134,14 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4541
+GIO_LAUNCHED_DESKTOP_FILE_PID = 11945
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
 GTK_IM_MODULE = fcitx
+ 
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -196,7 +197,7 @@ SHLVL = 1
 # environment
 IM_CONFIG_PHASE = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e3fd758b-7e15-4262-95a3-b154915adbae.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-67a4d74a-571b-42b9-a730-080f72cac594.sock
 # environment
 COMPIZ_CONFIG_PROFILE = ubuntu
 # environment
@@ -290,7 +291,7 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 4541
+VSCODE_PID = 11945
 # variable set hash-table stats:
 # Load=139/1024=14%, Rehash=0, Collisions=15/167=9%
 
@@ -300,14 +301,13 @@ VSCODE_PID = 4541
 
 # Directories
 
-# . (device 2049, inode 7345041): 19 files, no impossibilities.
+# . (device 2049, inode 7345041): 15 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
- 
 
 # Files
 
@@ -332,7 +332,7 @@ api:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-26 14:45:55.526976637
+#  Last modified 2022-05-26 15:30:54.104979366
 #  File has been updated.
 #  Successfully updated.
 
@@ -341,7 +341,7 @@ test:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 16):
+#  recipe to execute (from 'Makefile', line 15):
 	@echo "Running tests"
 	@rm -f coverage.out
 	@golint ./...
@@ -353,28 +353,17 @@ build:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 6):
+#  recipe to execute (from 'Makefile', line 5):
 	@echo "Compiling source"
 	@mkdir -p build
-	go build $(GO_EXTRA_BUILD_ARGS) -ldflags "-s -w -X main.version=$(VERSION)" -o build/ftpserver cmd/ftpserver/main.go
+	go build $(GO_EXTRA_BUILD_ARGS) -ldflags "-s -w -X main.version=$(VERSION)" -o build/ftp-server cmd/ftp-server/main.go
 
 run-compose-test:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 58):
+#  recipe to execute (from 'Makefile', line 40):
 	docker-compose run --rm networkserver make test
-
-dev-requirements:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 45):
-	go install golang.org/x/lint/golint
-	go install golang.org/x/tools/cmd/stringer
-	go install github.com/golang/protobuf/protoc-gen-go
-	go install github.com/goreleaser/goreleaser
-	go install github.com/goreleaser/nfpm
 
 # Not a target:
 .DEFAULT:
@@ -393,7 +382,7 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 11):
+#  recipe to execute (from 'Makefile', line 10):
 	@echo "Cleaning up workspace"
 	@rm -rf build
 	@rm -rf dist
@@ -402,7 +391,7 @@ dist:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 23):
+#  recipe to execute (from 'Makefile', line 22):
 	goreleaser
 	mkdir -p dist/upload/tar
 	mkdir -p dist/upload/deb
@@ -415,7 +404,7 @@ snapshot:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 32):
+#  recipe to execute (from 'Makefile', line 31):
 	@goreleaser --snapshot
 
 serve: build
@@ -423,30 +412,31 @@ serve: build
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 54):
-	@echo "Starting ChirpStack Network Server"
-	./build/ftpserver
+#  recipe to execute (from 'Makefile', line 36):
+	@echo "Starting Ftp Server"
+	./build/ftp-server
 
 update-vendor:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+ 
 
 # files hash-table stats:
-# Load=16/1024=2%, Rehash=0, Collisions=0/38=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/37=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 315 B / avg = 9 B
-# current buf: size = 8162 B / used = 315 B / count = 35 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 30 / storage = 260 B / avg = 8 B
+# current buf: size = 8162 B / used = 260 B / count = 30 / avg = 8 B
 
-# strcache performance: lookups = 54 / hit rate = 35%
+# strcache performance: lookups = 48 / hit rate = 37%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=1/54=2%
-# Finished Make data base on Thu May 26 14:46:18 2022
+# Load=30/8192=0%, Rehash=0, Collisions=1/48=2%
+# Finished Make data base on Fri May 27 14:08:21 2022
 
  
