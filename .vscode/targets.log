@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 27 14:08:21 2022
+# Make data base, printed on Mon May 30 10:28:46 2022
 
 # Variables
 
@@ -76,9 +76,8 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:abstract=/tmp/dbus-SgoH7yyQPG
- 
 # makefile (from 'Makefile', line 2)
-VERSION := 6dfc758
+VERSION := 4a3aa97
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
@@ -122,6 +121,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
+ 
 SESSION = ubuntu
 # environment
 XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/imx6
@@ -134,14 +134,13 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 11945
+GIO_LAUNCHED_DESKTOP_FILE_PID = 13495
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
 GTK_IM_MODULE = fcitx
- 
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -182,7 +181,9 @@ MAKE_VERSION := 4.1
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
+ 
 # environment
+ 
 XDG_VTNR = 7
 # environment
 LC_TIME = en_US.UTF-8
@@ -197,9 +198,10 @@ SHLVL = 1
 # environment
 IM_CONFIG_PHASE = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-67a4d74a-571b-42b9-a730-080f72cac594.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-f6e3efe2-92b4-41f5-b7e8-5405f08ab970.sock
 # environment
 COMPIZ_CONFIG_PROFILE = ubuntu
+ 
 # environment
 XDG_SESSION_ID = c2
 # environment
@@ -264,6 +266,7 @@ LC_NUMERIC = en_US.UTF-8
 <F = $(notdir $<)
 # environment
 LC_MEASUREMENT = en_US.UTF-8
+ 
 # environment
 INSTANCE = 
 # environment
@@ -291,13 +294,15 @@ LC_ADDRESS = en_US.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 11945
+VSCODE_PID = 13495
+ 
 # variable set hash-table stats:
 # Load=139/1024=14%, Rehash=0, Collisions=15/167=9%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
+ 
 
 # Directories
 
@@ -306,7 +311,9 @@ VSCODE_PID = 11945
 # 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
+ 
 
+ 
 # No implicit rules.
 
 # Files
@@ -345,6 +352,7 @@ test:
 	@echo "Running tests"
 	@rm -f coverage.out
 	@golint ./...
+ 
 	@go vet ./...
 	@go test -p 1 -v -cover ./... -coverprofile coverage.out
 
@@ -421,7 +429,6 @@ update-vendor:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 # files hash-table stats:
 # Load=15/1024=1%, Rehash=0, Collisions=0/37=0%
@@ -437,6 +444,6 @@ update-vendor:
 # strcache performance: lookups = 48 / hit rate = 37%
 # hash-table stats:
 # Load=30/8192=0%, Rehash=0, Collisions=1/48=2%
-# Finished Make data base on Fri May 27 14:08:21 2022
+# Finished Make data base on Mon May 30 10:28:46 2022
 
  

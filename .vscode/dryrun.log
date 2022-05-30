@@ -3,6 +3,6 @@ make: Entering directory '/home/imx6/tools/gopath/src/ftp-server'
  
 echo "Compiling source"
 mkdir -p build
-go build  -ldflags "-s -w -X main.version=6dfc758" -o build/ftp-server cmd/ftp-server/main.go
+go build  -ldflags "-s -w -X main.version=4a3aa97" -o build/ftp-server cmd/ftp-server/main.go
 make: Leaving directory '/home/imx6/tools/gopath/src/ftp-server'
  
